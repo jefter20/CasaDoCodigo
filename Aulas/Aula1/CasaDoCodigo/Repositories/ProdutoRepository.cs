@@ -22,7 +22,7 @@ namespace CasaDoCodigo.Repositories
         {
             foreach (var livro in livros)
             {
-                if (!dbSet.Where(p => p.Codigo == livro.Codigo).Any());
+                if (!dbSet.Where(p => p.Codigo == livro.Codigo).Any())
                 {
                     dbSet.Add(new Produto(livro.Codigo, livro.Nome, livro.Preco));
                 }
